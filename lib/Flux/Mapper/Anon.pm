@@ -1,7 +1,10 @@
 package Flux::Mapper::Anon;
 {
-  $Flux::Mapper::Anon::VERSION = '1.00';
+  $Flux::Mapper::Anon::VERSION = '1.01';
 }
+
+# ABSTRACT: callback-style mapper
+
 
 use Moo;
 with 'Flux::Mapper::Easy';
@@ -38,11 +41,15 @@ __END__
 
 =head1 NAME
 
-Flux::Mapper::Anon
+Flux::Mapper::Anon - callback-style mapper
 
 =head1 VERSION
 
-version 1.00
+version 1.01
+
+=head1 DESCRIPTION
+
+Usually, you shouldn't create instances of this class directly. Use C<mapper> helper from L<Flux::Simple> instead.
 
 =head1 AUTHOR
 

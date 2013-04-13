@@ -1,6 +1,6 @@
 package Flux::Mapper;
 {
-  $Flux::Mapper::VERSION = '1.00';
+  $Flux::Mapper::VERSION = '1.01';
 }
 
 # ABSTRACT: objects for transforming input or output streams.
@@ -68,7 +68,7 @@ Flux::Mapper - objects for transforming input or output streams.
 
 =head1 VERSION
 
-version 1.00
+version 1.01
 
 =head1 SYNOPSIS
 

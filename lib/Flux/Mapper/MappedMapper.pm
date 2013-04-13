@@ -1,7 +1,10 @@
 package Flux::Mapper::MappedMapper;
 {
-  $Flux::Mapper::MappedMapper::VERSION = '1.00';
+  $Flux::Mapper::MappedMapper::VERSION = '1.01';
 }
+
+# ABSTRACT: representation of mapper|mapper
+
 
 use Moo;
 with 'Flux::Mapper';
@@ -40,11 +43,17 @@ __END__
 
 =head1 NAME
 
-Flux::Mapper::MappedMapper
+Flux::Mapper::MappedMapper - representation of mapper|mapper
 
 =head1 VERSION
 
-version 1.00
+version 1.01
+
+=head1 DESCRIPTION
+
+Don't create instances of this class directly.
+
+Use C<$mapper1 | $mapper2> syntax sugar instead.
 
 =head1 AUTHOR
 

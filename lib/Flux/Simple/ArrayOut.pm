@@ -1,7 +1,10 @@
 package Flux::Simple::ArrayOut;
 {
-  $Flux::Simple::ArrayOut::VERSION = '1.00';
+  $Flux::Simple::ArrayOut::VERSION = '1.01';
 }
+
+# ABSTRACT: output stream which stores data in a given array
+
 
 use Moo;
 with 'Flux::Out';
@@ -42,11 +45,27 @@ __END__
 
 =head1 NAME
 
-Flux::Simple::ArrayOut
+Flux::Simple::ArrayOut - output stream which stores data in a given array
 
 =head1 VERSION
 
-version 1.00
+version 1.01
+
+=head1 SYNOPSIS
+
+    use Flux::Simple::ArrayOut;
+    $out = Flux::Simple::ArrayIn->new(\@data);
+    $out->write('foo');
+    $out->write('bar');
+
+    say for @data
+    # Prints:
+    # foo
+    # bar
+
+=head1 DESCRIPTION
+
+Usually, you shouldn't create instances of this class directly. Use C<array_out> helper from L<Flux::Simple> instead.
 
 =head1 AUTHOR
 

@@ -22,6 +22,7 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Carp" => 0,
     "Exporter" => 0,
+    "List::Util" => 0,
     "Moo" => 0,
     "Moo::Role" => 0,
     "Scalar::Util" => 0,
@@ -31,12 +32,14 @@ my %WriteMakefileArgs = (
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
+    "Params::Validate" => 0,
+    "Test::Class" => 0,
     "Test::Fatal" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "1.00",
+  "VERSION" => "1.01",
   "test" => {
-    "TESTS" => "t/*.t t/mapper/*.t t/simple/*.t"
+    "TESTS" => "t/*.t t/format/*.t t/mapper/*.t t/simple/*.t t/storage/*.t"
   }
 );
 

@@ -1,5 +1,12 @@
-# PODNAME: Flux
+package Flux;
+{
+  $Flux::VERSION = '1.01';
+}
+
 # ABSTRACT: stream processing toolkit
+
+
+1;
 
 __END__
 
@@ -11,7 +18,26 @@ Flux - stream processing toolkit
 
 =head1 VERSION
 
-version 1.00
+version 1.01
+
+=head1 SYNOPSIS
+
+use Flux::Simple qw( array_in array_out mapper );
+
+my $in = array_in([ 5, 6, 7 ]);
+$in = $in | mapper { shift() * 2 };
+
+my @result;
+my $out = array_out(\@result);
+$out = mapper { shift() * 3 } | mapper { shift() . "x" } | $out;
+
+$out->write($in->read);
+$out->write($in->read);
+say for @result;
+
+# Output:
+# 30x
+# 36x
 
 =head1 DESCRIPTION
 

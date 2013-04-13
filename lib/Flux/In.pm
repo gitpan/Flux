@@ -1,6 +1,6 @@
 package Flux::In;
 {
-  $Flux::In::VERSION = '1.00';
+  $Flux::In::VERSION = '1.01';
 }
 
 # ABSTRACT: input stream role
@@ -26,7 +26,7 @@ Flux::In - input stream role
 
 =head1 VERSION
 
-version 1.00
+version 1.01
 
 =head1 SYNOPSIS
 

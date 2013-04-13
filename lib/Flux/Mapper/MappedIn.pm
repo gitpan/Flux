@@ -1,7 +1,10 @@
 package Flux::Mapper::MappedIn;
 {
-  $Flux::Mapper::MappedIn::VERSION = '1.00';
+  $Flux::Mapper::MappedIn::VERSION = '1.01';
 }
+
+# ABSTRACT: representation of in|mapper
+
 
 use Moo;
 with 'Flux::In';
@@ -73,11 +76,17 @@ __END__
 
 =head1 NAME
 
-Flux::Mapper::MappedIn
+Flux::Mapper::MappedIn - representation of in|mapper
 
 =head1 VERSION
 
-version 1.00
+version 1.01
+
+=head1 DESCRIPTION
+
+Don't create instances of this class directly.
+
+Use C<$in | $mapper> sytax sugar instead.
 
 =head1 AUTHOR
 

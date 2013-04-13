@@ -3,6 +3,8 @@ abstract: 'core flux interfaces'
 author:
   - 'Vyacheslav Matyukhin <me@berekuk.ru>'
 build_requires:
+  Params::Validate: 0
+  Test::Class: 0
   Test::Fatal: 0
   Test::More: 0
 configure_requires:
@@ -17,6 +19,7 @@ name: Flux
 requires:
   Carp: 0
   Exporter: 0
+  List::Util: 0
   Moo: 0
   Moo::Role: 0
   Scalar::Util: 0
@@ -25,6 +28,5 @@ requires:
   strict: 0
   warnings: 0
 resources:
-  bugtracker: https://github.com/berekuk/Flux/issues
   repository: git://github.com/berekuk/Flux.git
-version: 1.00
+version: 1.01

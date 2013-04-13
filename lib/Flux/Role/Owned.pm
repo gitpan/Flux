@@ -1,6 +1,6 @@
 package Flux::Role::Owned;
 {
-  $Flux::Role::Owned::VERSION = '1.00';
+  $Flux::Role::Owned::VERSION = '1.01';
 }
 
 use Moo::Role;
@@ -23,7 +23,7 @@ Flux::Role::Owned - role for stream objects that belong to a specific user
 
 =head1 VERSION
 
-version 1.00
+version 1.01
 
 =head1 METHODS
 

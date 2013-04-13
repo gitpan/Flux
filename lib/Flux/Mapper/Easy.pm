@@ -1,7 +1,10 @@
 package Flux::Mapper::Easy;
 {
-  $Flux::Mapper::Easy::VERSION = '1.00';
+  $Flux::Mapper::Easy::VERSION = '1.01';
 }
+
+# ABSTRACT: simplified version of Flux::Mapper role
+
 
 use Moo::Role;
 with 'Flux::Mapper';
@@ -20,6 +23,7 @@ sub commit {
     return ();
 }
 
+
 1;
 
 __END__
@@ -28,11 +32,19 @@ __END__
 
 =head1 NAME
 
-Flux::Mapper::Easy
+Flux::Mapper::Easy - simplified version of Flux::Mapper role
 
 =head1 VERSION
 
-version 1.00
+version 1.01
+
+=head1 DESCRIPTION
+
+This role is an extension of Flux::Mapper role. It provides the sane C<write_chunk> implementation and the empty C<commit> implementation, so you only have to define C<write>.
+
+=head1 SEE ALSO
+
+You can use C<mapper> helper from L<Flux::Simple> to create a mapper object without defining a new class.
 
 =head1 AUTHOR
 

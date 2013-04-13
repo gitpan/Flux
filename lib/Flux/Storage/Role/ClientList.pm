@@ -1,6 +1,6 @@
 package Flux::Storage::Role::ClientList;
 {
-  $Flux::Storage::Role::ClientList::VERSION = '1.01';
+  $Flux::Storage::Role::ClientList::VERSION = '1.02';
 }
 
 # ABSTRACT: common methods for storages with named clients
@@ -36,7 +36,7 @@ Flux::Storage::Role::ClientList - common methods for storages with named clients
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 SYNOPSIS
 

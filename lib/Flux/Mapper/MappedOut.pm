@@ -1,6 +1,6 @@
 package Flux::Mapper::MappedOut;
 {
-  $Flux::Mapper::MappedOut::VERSION = '1.01';
+  $Flux::Mapper::MappedOut::VERSION = '1.02';
 }
 
 # ABSTRACT: representation of mapper|out
@@ -58,7 +58,7 @@ Flux::Mapper::MappedOut - representation of mapper|out
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 DESCRIPTION
 

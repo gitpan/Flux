@@ -1,6 +1,6 @@
 package Flux::Mapper::Easy;
 {
-  $Flux::Mapper::Easy::VERSION = '1.01';
+  $Flux::Mapper::Easy::VERSION = '1.02';
 }
 
 # ABSTRACT: simplified version of Flux::Mapper role
@@ -36,7 +36,7 @@ Flux::Mapper::Easy - simplified version of Flux::Mapper role
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 DESCRIPTION
 

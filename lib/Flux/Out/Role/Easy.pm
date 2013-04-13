@@ -1,6 +1,6 @@
 package Flux::Out::Role::Easy;
 {
-  $Flux::Out::Role::Easy::VERSION = '1.01';
+  $Flux::Out::Role::Easy::VERSION = '1.02';
 }
 
 # ABSTRACT: role to implement output streams with only one write() method
@@ -34,7 +34,7 @@ Flux::Out::Role::Easy - role to implement output streams with only one write() m
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 AUTHOR
 

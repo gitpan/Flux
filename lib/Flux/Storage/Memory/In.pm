@@ -1,6 +1,6 @@
 package Flux::Storage::Memory::In;
 {
-  $Flux::Storage::Memory::In::VERSION = '1.01';
+  $Flux::Storage::Memory::In::VERSION = '1.02';
 }
 
 # ABSTRACT: in-memory input stream for Flux::MemoryStorage
@@ -32,6 +32,7 @@ has 'pos' => (
 sub read {
     my $self = shift;
     my $item = $self->storage->_read($self->pos);
+    return unless $item;
     $self->pos($self->pos + 1);
     return $item;
 }
@@ -64,7 +65,7 @@ Flux::Storage::Memory::In - in-memory input stream for Flux::MemoryStorage
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 AUTHOR
 

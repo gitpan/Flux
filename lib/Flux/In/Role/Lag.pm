@@ -1,6 +1,6 @@
 package Flux::In::Role::Lag;
 {
-  $Flux::In::Role::Lag::VERSION = '1.01';
+  $Flux::In::Role::Lag::VERSION = '1.02';
 }
 
 # ABSTRACT: role for input streams which are aware of their lag
@@ -23,7 +23,7 @@ Flux::In::Role::Lag - role for input streams which are aware of their lag
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 DESCRIPTION
 

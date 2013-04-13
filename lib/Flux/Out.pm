@@ -1,6 +1,6 @@
 package Flux::Out;
 {
-  $Flux::Out::VERSION = '1.01';
+  $Flux::Out::VERSION = '1.02';
 }
 
 # ABSTRACT: output stream interface
@@ -26,7 +26,7 @@ Flux::Out - output stream interface
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 SYNOPSIS
 

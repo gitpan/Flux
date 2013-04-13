@@ -1,6 +1,6 @@
 package Flux::Simple::ArrayOut;
 {
-  $Flux::Simple::ArrayOut::VERSION = '1.01';
+  $Flux::Simple::ArrayOut::VERSION = '1.02';
 }
 
 # ABSTRACT: output stream which stores data in a given array
@@ -49,7 +49,7 @@ Flux::Simple::ArrayOut - output stream which stores data in a given array
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 SYNOPSIS
 

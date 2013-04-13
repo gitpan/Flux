@@ -1,6 +1,6 @@
 package Flux::In::Role::Easy;
 {
-  $Flux::In::Role::Easy::VERSION = '1.01';
+  $Flux::In::Role::Easy::VERSION = '1.02';
 }
 
 # ABSTRACT: role to implement input streams with only one read() method
@@ -36,7 +36,7 @@ Flux::In::Role::Easy - role to implement input streams with only one read() meth
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 AUTHOR
 

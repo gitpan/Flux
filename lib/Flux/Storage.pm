@@ -1,6 +1,6 @@
 package Flux::Storage;
 {
-  $Flux::Storage::VERSION = '1.01';
+  $Flux::Storage::VERSION = '1.02';
 }
 
 # ABSTRACT: interface to any flux storage.
@@ -23,7 +23,7 @@ Flux::Storage - interface to any flux storage.
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 SYNOPSIS
 

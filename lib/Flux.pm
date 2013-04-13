@@ -1,6 +1,6 @@
 package Flux;
 {
-  $Flux::VERSION = '1.01';
+  $Flux::VERSION = '1.02';
 }
 
 # ABSTRACT: stream processing toolkit
@@ -18,7 +18,7 @@ Flux - stream processing toolkit
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 SYNOPSIS
 

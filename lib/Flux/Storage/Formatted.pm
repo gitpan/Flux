@@ -1,6 +1,6 @@
 package Flux::Storage::Formatted;
 {
-  $Flux::Storage::Formatted::VERSION = '1.01';
+  $Flux::Storage::Formatted::VERSION = '1.02';
 }
 
 # ABSTRACT: Representation of a storage wrapped with a format.
@@ -95,7 +95,7 @@ Flux::Storage::Formatted - Representation of a storage wrapped with a format.
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 DESCRIPTION
 

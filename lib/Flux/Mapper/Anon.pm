@@ -1,6 +1,6 @@
 package Flux::Mapper::Anon;
 {
-  $Flux::Mapper::Anon::VERSION = '1.01';
+  $Flux::Mapper::Anon::VERSION = '1.02';
 }
 
 # ABSTRACT: callback-style mapper
@@ -45,7 +45,7 @@ Flux::Mapper::Anon - callback-style mapper
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 DESCRIPTION
 

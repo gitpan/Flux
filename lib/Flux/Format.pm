@@ -1,6 +1,6 @@
 package Flux::Format;
 {
-  $Flux::Format::VERSION = '1.01';
+  $Flux::Format::VERSION = '1.02';
 }
 
 # ABSTRACT: interface for symmetric two-way formatting of any storage.
@@ -34,7 +34,7 @@ Flux::Format - interface for symmetric two-way formatting of any storage.
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 SYNOPSIS
 

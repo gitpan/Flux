@@ -1,6 +1,6 @@
 package Flux::Storage::Formatted;
 {
-  $Flux::Storage::Formatted::VERSION = '1.02';
+  $Flux::Storage::Formatted::VERSION = '1.03';
 }
 
 # ABSTRACT: Representation of a storage wrapped with a format.
@@ -23,9 +23,9 @@ sub write {
     my $self = shift;
     my ($item) = @_;
 
-    my @filtered = $self->format->encoder->write($item);
-    return unless @filtered;
-    $self->storage->write($_, @_) for @filtered; # would write_chunk be better?
+    my @mapped = $self->format->encoder->write($item);
+    return unless @mapped;
+    $self->storage->write($_, @_) for @mapped; # would write_chunk be better?
 }
 
 sub write_chunk {
@@ -95,7 +95,7 @@ Flux::Storage::Formatted - Representation of a storage wrapped with a format.
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package Flux::Role::Description;
 {
-  $Flux::Role::Description::VERSION = '1.02';
+  $Flux::Role::Description::VERSION = '1.03';
 }
 
 use Moo::Role;
@@ -23,7 +23,7 @@ Flux::Role::Description - role for stream objects that implement 'description'
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 METHODS
 

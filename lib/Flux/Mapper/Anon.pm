@@ -1,13 +1,13 @@
 package Flux::Mapper::Anon;
 {
-  $Flux::Mapper::Anon::VERSION = '1.02';
+  $Flux::Mapper::Anon::VERSION = '1.03';
 }
 
 # ABSTRACT: callback-style mapper
 
 
 use Moo;
-with 'Flux::Mapper::Easy';
+with 'Flux::Mapper::Role::Easy';
 
 has 'cb' => (
     is => 'ro',
@@ -45,7 +45,7 @@ Flux::Mapper::Anon - callback-style mapper
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 DESCRIPTION
 

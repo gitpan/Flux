@@ -1,6 +1,6 @@
 package Flux::Storage::Memory::In;
 {
-  $Flux::Storage::Memory::In::VERSION = '1.02';
+  $Flux::Storage::Memory::In::VERSION = '1.03';
 }
 
 # ABSTRACT: in-memory input stream for Flux::MemoryStorage
@@ -65,7 +65,7 @@ Flux::Storage::Memory::In - in-memory input stream for Flux::MemoryStorage
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 AUTHOR
 

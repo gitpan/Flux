@@ -1,6 +1,6 @@
 package Flux::Simple::ArrayIn;
 {
-  $Flux::Simple::ArrayIn::VERSION = '1.02';
+  $Flux::Simple::ArrayIn::VERSION = '1.03';
 }
 
 # ABSTRACT: input stream representation of an array
@@ -47,7 +47,7 @@ Flux::Simple::ArrayIn - input stream representation of an array
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 SYNOPSIS
 

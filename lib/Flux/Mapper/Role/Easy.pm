@@ -1,6 +1,6 @@
-package Flux::Mapper::Easy;
+package Flux::Mapper::Role::Easy;
 {
-  $Flux::Mapper::Easy::VERSION = '1.02';
+  $Flux::Mapper::Role::Easy::VERSION = '1.03';
 }
 
 # ABSTRACT: simplified version of Flux::Mapper role
@@ -32,15 +32,15 @@ __END__
 
 =head1 NAME
 
-Flux::Mapper::Easy - simplified version of Flux::Mapper role
+Flux::Mapper::Role::Easy - simplified version of Flux::Mapper role
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 DESCRIPTION
 
-This role is an extension of Flux::Mapper role. It provides the sane C<write_chunk> implementation and the empty C<commit> implementation, so you only have to define C<write>.
+This role is an extension of L<Flux::Mapper> role. It provides the sane C<write_chunk> implementation and the empty C<commit> implementation, so you only have to define C<write>.
 
 =head1 SEE ALSO
 

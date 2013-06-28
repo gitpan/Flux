@@ -1,9 +1,9 @@
 package Flux::In;
 {
-  $Flux::In::VERSION = '1.02';
+  $Flux::In::VERSION = '1.03';
 }
 
-# ABSTRACT: input stream role
+# ABSTRACT: input stream interface
 
 use Moo::Role;
 
@@ -14,6 +14,7 @@ requires 'read_chunk';
 requires 'commit';
 
 
+
 1;
 
 __END__
@@ -22,13 +23,15 @@ __END__
 
 =head1 NAME
 
-Flux::In - input stream role
+Flux::In - input stream interface
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 SYNOPSIS
+
+    # How to use objects implementing this role
 
     $line = $in->read;
     $chunk = $in->read_chunk($limit);
@@ -36,9 +39,39 @@ version 1.02
 
 =head1 DESCRIPTION
 
-C<Flux::In> is the role which every reading stream must implement.
+C<Flux::In> is a role which every reading stream must implement.
 
 Consumers must implement C<read>, C<read_chunk> and C<commit> methods.
+
+=head1 CONSUMER SYNOPSIS
+
+    # How to consume this role
+
+    use Moo;
+    with "Flux::In";
+
+    has counter => (
+        is => "ro",
+        default => sub { 0 },
+    );
+
+    sub read {
+        my ($self) = @_;
+        my $counter = $self->counter;
+        $self->counter($counter + 1);
+        return "Line $counter";
+    }
+
+    sub read_chunk {
+        my ($self, $limit) = @_;
+        my $counter = $self->counter;
+        $self->counter($counter + $limit);
+        return [ $counter .. $counter + $limit - 1 ];
+    }
+
+    sub commit {
+        say "commiting position";
+    }
 
 =head1 INTERFACE
 
@@ -65,6 +98,12 @@ Generally, successful commit means that you can restart your program and continu
 Stream's author should make sure that stream is still readable after this.
 
 =back
+
+=head1 SEE ALSO
+
+L<Flux::In::Role::Easy> - specialization of this role for those who don't want to bother with 3 methods, and want to just implement C<read()>.
+
+L<Flux::In::Role::Lag> - role for input streams which are aware of their lag.
 
 =head1 AUTHOR
 

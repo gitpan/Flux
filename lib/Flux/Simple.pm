@@ -1,6 +1,6 @@
 package Flux::Simple;
 {
-  $Flux::Simple::VERSION = '1.02';
+  $Flux::Simple::VERSION = '1.03';
 }
 
 # ABSTRACT: functional-style stream generators
@@ -47,7 +47,7 @@ Flux::Simple - functional-style stream generators
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 SYNOPSIS
 

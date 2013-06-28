@@ -1,9 +1,9 @@
 package Flux::Mapper;
 {
-  $Flux::Mapper::VERSION = '1.02';
+  $Flux::Mapper::VERSION = '1.03';
 }
 
-# ABSTRACT: objects for transforming input or output streams.
+# ABSTRACT: interface for transforming input or output streams.
 
 
 use Moo::Role;
@@ -64,11 +64,11 @@ __END__
 
 =head1 NAME
 
-Flux::Mapper - objects for transforming input or output streams.
+Flux::Mapper - interface for transforming input or output streams.
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 SYNOPSIS
 
@@ -86,13 +86,13 @@ version 1.02
 
 =head1 DESCRIPTION
 
-C<Flux::Mapper> instances can be attached to other streams to filter, expand and transform their data.
+C<Flux::Mapper> is a role for mapper classes. Mappers can be attached to other streams to filter, expand and transform their data.
 
-It's API is currently identical to C<Flux::Out>, consisting of C<write>, C<write_chunk> and C<commit> methods, but unlike common output streams, values returned from these methods are always getting used.
+Mapper API is identical to C<Flux::Out>, consisting of C<write>, C<write_chunk> and C<commit> methods, but unlike common output streams, values returned from these methods are always getting used.
 
-Depending on context, mappers can map input or output streams, or be attached to other mappers to construct more complex mappers.
+Depending on the context, mappers can map input or output streams, or be attached to other mappers to construct more complex mappers.
 
-The easiest way to create a new mapper is to use C<mapper(&)> function from C<Flux::Simple>. Alternatively, you can inherit your class from C<Flux::Mapper> and implement C<write> and/or C<write_chunk> methods (and optionally C<commit> too).
+The common way to create a new mapper is to use C<mapper(&)> function from C<Flux::Simple>. Alternatively, you can consume C<Flux::Mapper> role in your class and implement C<write>, C<write_chunk> and C<commit> methods.
 
 C<|> operator is overloaded by all mappers. It works differently depending on a second argument. Synopsis contains some examples which show the details.
 
@@ -106,7 +106,7 @@ Mappers don't have to return all results after each C<write> call, and results d
 
 Process one item and return some "mapped" (rewritten) items.
 
-Number of returned items can be any, from zero to several, so returned data should always be processed in the list context, unless you're absolutely sure that your filter is of one-to-one kind.
+Number of returned items can be any, from zero to several, so returned data should always be processed in the list context, unless you're sure that your mapper is of one-to-one kind.
 
 =item I<write_chunk($chunk)>
 
@@ -118,9 +118,15 @@ Rewritten chunk can contain any number of items, independently from the original
 
 C<commit> method can flush cached data and return remaining transformed items as plain list.
 
-If you don't need flushing, just return C<()>, or use C<Flux::Mapper::Easy> instead of this role.
+If you don't need flushing, just return C<()>, or use C<Flux::Mapper::Role::Easy> instead of this role.
 
 =back
+
+=head1 SEE ALSO
+
+C<mapper()> function from L<Flux::Simple>.
+
+L<Flux::Mapper::Role::Easy>.
 
 =head1 AUTHOR
 

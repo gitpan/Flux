@@ -1,6 +1,6 @@
 package Flux::Storage::Memory;
 {
-  $Flux::Storage::Memory::VERSION = '1.02';
+  $Flux::Storage::Memory::VERSION = '1.03';
 }
 
 # ABSTRACT: in-memory storage with support for named clients
@@ -130,7 +130,7 @@ Flux::Storage::Memory - in-memory storage with support for named clients
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 AUTHOR
 

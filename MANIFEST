@@ -12,10 +12,10 @@ lib/Flux/In/Role/Easy.pm
 lib/Flux/In/Role/Lag.pm
 lib/Flux/Mapper.pm
 lib/Flux/Mapper/Anon.pm
-lib/Flux/Mapper/Easy.pm
 lib/Flux/Mapper/MappedIn.pm
 lib/Flux/Mapper/MappedMapper.pm
 lib/Flux/Mapper/MappedOut.pm
+lib/Flux/Mapper/Role/Easy.pm
 lib/Flux/Out.pm
 lib/Flux/Out/Role/Easy.pm
 lib/Flux/Role/Description.pm
